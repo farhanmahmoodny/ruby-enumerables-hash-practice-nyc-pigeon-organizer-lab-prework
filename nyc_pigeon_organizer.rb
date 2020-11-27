@@ -5,10 +5,5 @@ def nyc_pigeon_organizer(data)
   arr.each do |item|
     new[item] = {:color => [], :gender => [], :lives => []}
   end
-  date[:color].each do |col|
-    col.each do |pig|
-      new[pig][:color].push(col)
-    end
-  end
   new
 end
