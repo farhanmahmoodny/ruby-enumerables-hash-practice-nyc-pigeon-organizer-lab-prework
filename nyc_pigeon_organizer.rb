@@ -5,5 +5,8 @@ def nyc_pigeon_organizer(data)
   arr.each do |item|
     new[item] = {}
   end
+  data[:color].each do |color|
+    color.each do |c|
+      new[c][]
   new
 end
