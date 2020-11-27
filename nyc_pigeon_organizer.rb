@@ -7,7 +7,11 @@ def nyc_pigeon_organizer(data)
   end
   data[:color].each do |color|
     color.each do |pigeon|
-      new[pigeon][:color] += color
+      if new[pigeon][:color]
+        new[pigeon][:color].push(color)
+      else
+        new[pigeon][:color] = [color]
+      end
     end
   end
   new
