@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
   end
   date[:color].each do |col|
     col.each do |pig|
-      new[pig][:color].push(col)
+      new[pig][:color] << col
     end
   end
   new
