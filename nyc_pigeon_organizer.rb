@@ -3,15 +3,11 @@ def nyc_pigeon_organizer(data)
   new = {}
   arr = data[:gender][:male].concat(data[:gender][:female])
   arr.each do |item|
-    new[item] = {}
+    new[item] = {:color => [], :gender => [], :lives => []}
   end
   data[:color].each do |color|
     color.each do |pigeon|
-      if new[pigeon][:color]
-        new[pigeon][:color].push(color)
-      else
-        new[pigeon][:color] = [color]
-      end
+      new[pigeon][:color].push(color)
     end
   end
   new
